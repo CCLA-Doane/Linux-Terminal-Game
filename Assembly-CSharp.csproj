@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Tools/RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.sh</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5245E4CD-7042-E740-04ED-A832BC11A6BC}</ProjectGuid>
+    <ProjectGuid>{cde44552-4270-40e7-04ed-a832bc11a6bc}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,14 +45,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="UnityEngine">
-      <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Assets\AnimateUpdate.cs" />
      <Compile Include="Assets\CommandLine.cs" />
      <Compile Include="Assets\MenuDisplay.cs" />
@@ -68,38 +58,8 @@
      <Compile Include="Assets\WM2000\Terminal\InputBuffer.cs" />
      <Compile Include="Assets\WM2000\Terminal\Terminal.cs" />
      <Compile Include="Assets\WM2000\Utility.cs" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>/home/ccladev/Documents/unity-projects/terminalgame/Linux-Terminal-Game-CCLA/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <Reference Include="UnityEngine">
+ <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -274,6 +234,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor">
+ <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -621,8 +584,54 @@
  <HintPath>/home/ccladev/Unity/Hub/Editor/2019.3.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{e31d2257-db30-7567-715c-789ce788bc7e}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{ba7f6b54-d700-ca12-3451-4afaf26cb6e0}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{a8ebb96e-4e54-45f0-bb1d-38ab69c7e6b6}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{1a84b3ff-9038-843f-7f6f-655584d930f4}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{62f11417-8be4-515b-8e1b-2af9b40615e9}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{5eadcf32-0a52-4b82-3280-e4f87cf843ca}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{2f97d5f6-c970-2d25-d04b-108331661008}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{1ddf7d56-16f2-a065-a589-958ac39510e3}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
+      <Project>{1a6e5965-ce51-e7c9-04bf-3aa4eee4b9d8}</Project>
+      <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{2a80fb73-e53e-6463-9f89-39ee0fb5377a}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{f840ce0f-b26b-b6e7-61e2-15605556ed96}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

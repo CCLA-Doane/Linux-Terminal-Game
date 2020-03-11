@@ -22,7 +22,15 @@ public class BasicsTerminal : MonoBehaviour
     string dirChange;
     string currDirectory;
     enum Screen {Selection, whoami, pwd, cd, ls};
+    ArrayList addFile = new ArrayList();
 
+    void fillDir()
+    {
+        for (int i = 0; i < fileDirectory.Length; i++)
+        {
+            addFile.Add(fileDirectory[i].ToString());
+        }
+    }
     Screen currentScreen;
     void Start()
     {
@@ -187,6 +195,12 @@ public class BasicsTerminal : MonoBehaviour
     {
         Terminal.WriteLine("You can type menu at any time to go back");
 
+        if (input == "menu")
+        {
+            Terminal.ClearScreen();
+            SelectTutorial();
+        }
+
         if (input == "clear")
         {
             Terminal.ClearScreen();
@@ -221,7 +235,12 @@ public class BasicsTerminal : MonoBehaviour
         {
             dirChange = input.Substring(2, input.Length - 2);
             currDirectory = dirChange;
-            Terminal.WriteLine(userPrompt + dirChange + "]");
+             Terminal.WriteLine(userPrompt + dirChange + "]");
+        }
+
+        if(input == "nostromo")
+        {
+            easterEgg();
         }
     }
 }

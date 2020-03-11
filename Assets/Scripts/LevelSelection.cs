@@ -62,6 +62,6 @@ public class LevelSelection : MonoBehaviour
     //Go to advanced screen
     void PlayAdvanced()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 }
